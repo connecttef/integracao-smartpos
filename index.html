@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <!-- Required Meta Tags -->
+   <meta charset="utf-8">
+
+   <meta name="description"
+      content="Simplifique a integração do seu sistema a múltiplas adquirentes via SmartPOS com Connect TEF. Elimine homologações, reduza tempo e agilize pagamentos seguros." />
+
+   <meta name="keywords"
+      content="integração com meios de pagamento, integração SmartPOS, pagamento integrado, TEF, adquirentes, ERP com pagamento, gateway de pagamento, POS Android, SmartPOS, integração de pagamentos, pagamentos móveis, maquininha de cartão, pagamentos eletrônicos, integração de sistemas de pagamento, integração de adquirentes, soluções de TEF, integração de PDV, soluções de pagamento para negócios, integração de e-commerce com TEF, pagamento sem digitação manual, integração direta com SmartPOS, comunicação online e local com POS" />
+
+   <meta name="author" content="Connect TEF">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title> Connect Tef - Transforme sua maquininha em um ponto de pagamento inteligente </title>
+   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+   <!--Core CSS -->
+   <link href="https://fonts.googleapis.com/css2?family=DMSans:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+   <link rel="stylesheet" href="assets/css/app.css">
+   <link id="theme-sheet" rel="stylesheet" href="assets/css/black.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+   <script src="https://unpkg.com/feather-icons"></script>
+   <link rel="stylesheet" href="https://bulkit.cssninja.io/assets/css/iconsmind.css">
+   <!--Redimencionando Rodapé versão Dez/2022 -->
+   <style>
+      iframe {
+         border: none;
+         width: 100%;
+         height: 570px;
+      }
+
+      @media (min-width: 1216px) {
+         iframe {
+            width: 100%;
+            height: 570px;
+         }
+      }
+
+      @media (max-width: 1215px) {
+         iframe {
+            width: 100%;
+            height: 650px;
+         }
+      }
+
+      @media (max-width: 902px) {
+         iframe {
+            width: 100%;
+            height: 670px;
+         }
+      }
+
+      @media (max-width: 768px) {
+         iframe {
+            width: 100%;
+            height: 2130px;
+         }
+      }
+
+      @media (max-width: 475px) {
+         iframe {
+            width: 100%;
+            height: 2170px;
+         }
+      }
+
+      @media (max-width: 340px) {
+         iframe {
+            width: 100%;
+            height: 2195px;
+         }
+      }
+   </style>
+   <style type="text/css">
+      #mobileshow {
+         display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+         #mobileshow {
+            display: block;
+         }
+      }
+
+      .sobrepor-fundo {
+         background-color: #0F83C4 !important;
+         color: white;
+         border-radius: 32px !important;
+      }
+
+      .text-white {
+         color: #fff !important;
+      }
+
+      .background-gradient-new {
+         background: linear-gradient(to right, #0F83C4, #2716BC) !important;
+      }
+
+      .has-equal-height {
+         display: flex;
+         flex-direction: column;
+         height: 303px;
+      }
+
+      .card-fixed-height {
+         height: 440px;
+      }
+
+      .card-fixed-height-md {
+         height: 256px;
+      }
+
+      .img-size-circle {
+         width: 359px;
+         height: 351px;
+         flex-shrink: 0;
+         /* Impede que a imagem encolha */
+         border-radius: 50%;
+         /* Torna a imagem circular */
+         object-fit: cover;
+         /* Garante que a imagem preencha o espaço e mantenha a proporção */
+      }
+
+      @media (max-width: 768px) {
+         .img-size-circle {
+            width: 18rem;
+            /* Reduz a largura em telas menores */
+            height: 17.5rem;
+            /* Reduz a altura em telas menores */
+         }
+      }
+
+      @media (max-width: 480px) {
+         .img-size-circle {
+            width: 15rem;
+            /* Ajusta ainda mais a imagem para telas muito pequenas */
+            height: 14.5rem;
+         }
+      }
+
+      .card-bg-blue-p {
+         background-color: #E7F1FC;
+         /* Cor de fundo azul claro */
+         border: 1px solid #B6D4F4;
+         /* Borda com a mesma cor do fundo */
+         border-radius: 8px;
+         /* Opcional: bordas arredondadas para os cards */
+      }
+
+      .bg-blue-2 {
+         background-color: #0B1320 !important;
+      }
+
+      .bg-blue-3 {
+         position: relative;
+         background-color: #0B1320 !important;
+         background-image: url('https://img.freepik.com/premium-photo/portrait-call-center-woman-wearing-headphone-smiled-working-with-staffs_46383-22853.jpg?ga=GA1.1.1789525596.1747675468&w=740');
+         background-size: cover;
+         background-position: right center;
+         background-repeat: no-repeat;
+         color: #fff;
+         /* Texto branco para contraste */
+      }
+
+      .background-white {
+         background-color: #fff;
+         border-radius: 24px;
+         padding: 24px;
+      }
+
+      .bg-blue-3>* {
+         position: relative;
+         z-index: 1;
+         /* Garante que o conteúdo fique acima da sobreposição */
+      }
+
+      .border-radius {
+         border-radius: 32px !important;
+      }
+
+      .border-radius-cards-features {
+         border-radius: 32px !important;
+         color: #1e1d1d;
+         /* Cor padrão do texto */
+      }
+
+      .content blockquote {
+         background-color: #e7f1fc !important;
+         padding: 1.25em 1.5em;
+         border: #8db0d6 1px;
+      }
+
+      html {
+         scroll-behavior: smooth;
+      }
+
+      /* Para esconder elementos na versão mobile e ajustar o texto */
+      @media (max-width: 768px) {
+         .hero-image-composition-1 {
+            display: none;
+            /* Esconde a composição da imagem no mobile */
+         }
+
+         .columns.is-vcentered .column.is-5.signup-column {
+            width: 100%;
+            /* Garante que a coluna de texto ocupe toda a largura disponível */
+         }
+
+         .columns.is-vcentered .column.is-6.is-offset-1 {
+            display: none;
+            /* Esconde a coluna com imagem e elementos visuais */
+         }
+
+         /* Ajusta o tamanho do título e descrição no celular */
+         .main-title {
+            font-size: 1.5rem;
+            /* Ajuste do tamanho do título para dispositivos móveis */
+         }
+
+         .subtitle {
+            font-size: 1rem;
+            /* Ajuste do tamanho da descrição para dispositivos móveis */
+         }
+
+         .button-cta {
+            font-size: 1rem;
+            /* Ajuste do tamanho do botão para dispositivos móveis */
+         }
+      }
+
+      /* Navbar padrão (transparente) */
+      .navbar.is-transparent {
+         background-color: transparent;
+         transition: background-color 0.3s ease;
+      }
+
+      /* Navbar ao fazer scroll */
+      .navbar.navbar-scrolled {
+         background-color: #ffffff;
+         /* Cor azul */
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Navbar aberta no mobile */
+      .navbar.navbar-open {
+         background-color: #ffffff;
+         /* Cor azul para estado aberto */
+      }
+
+      .card-br {
+         border-radius: 24px;
+         border: solid 1px;
+         border-color: slategrey;
+      }
+
+      /* Responsividade: ajustar o border-radius em telas menores */
+      @media (max-width: 768px) {
+         .card-br {
+            border-radius: 16px;
+         }
+      }
+
+      .feature-article {
+         padding: 24px;
+         box-shadow: none;
+         /* remove sombra */
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+      }
+
+      .feature-icon {
+         color: #0B1320;
+         width: 32px;
+         height: 32px;
+         flex-shrink: 0;
+      }
+
+      .feature-icon:hover {
+         transform: scale(1.1);
+         transition: transform 0.2s ease;
+      }
+
+      .cta-block {
+         background-color: #0B1320 !important;
+         border-top-left-radius: 24px;
+         border-top-right-radius: 24px;
+         padding: 32px;
+         border: none;
+         box-shadow: none;
+         border-bottom: 1px solid #373a3f;
+         /* borda com tom médio */
+      }
+
+      .img-size-circle {
+         width: 264px;
+         height: 364px;
+         flex-shrink: 0;
+         border-radius: 50%;
+         object-fit: cover;
+      }
+
+      .navbar-item img {
+         max-height: 2.1rem;
+         /* aproximadamente 33.6px */
+         margin-top: -3rem;
+         /* aproximadamente -48px */
+      }
+
+      .navbar-item img {
+         max-height: 2.1rem;
+         /* aproximadamente 33.6px */
+         margin-top: -3rem;
+         /* aproximadamente -48px */
+      }
+
+      /* Ajuste para telas pequenas: até 768px (mobile) */
+      @media (max-width: 768px) {
+         .navbar-item img {
+            max-height: 1.5rem;
+            /* reduz um pouco, cerca de 24px */
+            margin-top: -1rem;
+            /* reduz o deslocamento */
+         }
+      }
+
+      .text-wrap {
+         overflow-wrap: break-word;
+         word-break: break-word;
+      }
+
+      .faq-block .block-body {
+         max-height: 0;
+         overflow: hidden;
+         transition: max-height 0.4s ease, padding 0.4s ease;
+         padding: 0 0;
+      }
+
+      .faq-block .block-body.open {
+         max-height: 500px;
+         /* ajuste conforme o conteúdo real */
+         padding: 10px 0;
+      }
+
+      /* Reduz espaço da navbar no mobile */
+      @media screen and (max-width: 768px) {
+         .navbar {
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+         }
+
+         .navbar-item {
+            padding: 0.25rem 1rem !important;
+         }
+
+         .hero .hero-body {
+            padding: 2rem 1rem !important;
+         }
+
+         .hero .title,
+         .hero .subtitle {
+            text-align: center !important;
+         }
+
+         .hero .button {
+            display: block;
+            margin: 1rem auto 0 auto;
+         }
+
+         .hero .image {
+            display: flex;
+            justify-content: center;
+         }
+      }
+
+      .background-white {
+         background-color: #fff;
+         border-radius: 24px;
+         padding: 24px;
+      }
+
+      @media (max-width: 720px) {
+         .background-white {
+            padding: 0;
+            border-radius: 0px;
+         }
+      }
+
+
+      .has-background-black-ter {
+         background-color: #0B1320 !important;
+      }
+   </style>
+</head>
+
+<body class="is-theme-black">
+   <div class="hero  is-cover is-relative   " data-background="assets/img/photos/captures/fundo-azul.webp"
+      data-color="#6e68c4" data-color-opacity=".6" data-demo-background="assets/img/photos/captures/fundo-azul.webp"
+      data-page-theme="blue">
+      <nav class="navbar navbar-wrapper navbar-fade  background-white">
+         <div class="container background-white">
+            <div class="navbar-brand">
+               <a class="navbar-item" href="https:/conecttef.com.br">
+                  <img class="light-logo" src="assets/img/logos/logo_original.svg" alt="Logo Branco">
+               </a>
+               <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+               </a>
+            </div>
+            <div id="navbar-menu" class="navbar-menu">
+               <div class="navbar-start">
+  
+               </div>
+               <div class="navbar-end">
+                  <div class="navbar-item is-button is-centered-tablet">
+                     <a href="https://www.pdvpos.com.br/contato/index.html"
+                        class="button primary-btn raised action-button is-bold rounded">
+                        Fale com especialista &nbsp;
+                        <i class="sl sl-icon-bubbles"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <section class="hero is-medium is-bold has-background-primary" style="padding-top: 100px;">
+         <div class="hero-body">
+            <div class="container">
+               <div class="columns is-vcentered is-multiline">
+                  <div class="column is-6 has-text-left">
+                     <h1 class="title main-title text-bold is-1">
+                        Simplifique a Integração com Meios de Pagamento via SmartPOS e Conecte Seu Sistema a Múltiplas
+                        Adquirentes
+                     </h1>
+
+                     <h2 class="subtitle has-text-white text-wrap">
+                        Integre seu PDV, ERP, e-commerce, delivery ou autoatendimento a múltiplos SmartPOS e adquirentes
+                        com flexibilidade e segurança.
+                        Elimine homologações, reduza o tempo de implantação e facilite pagamentos rápidos e confiáveis.
+                     </h2>
+
+                     <a href="#contato" class="button button-cta is-bold btn-align white-btn rounded">
+                        Solicitar demonstração
+                     </a>
+
+                  </div>
+                  <div class="column is-6">
+
+                     <figure class="image is-4by3">
+                        <img src="assets/img/photos/captures/mockup.png" alt="Tela de listagem das transações">
+                     </figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+   </div>
+   </div>
+   <div id="services" class="section is-medium   mt-40">
+      <div class="container">
+         <!-- Title -->
+         <div class="section-title-wrapper has-text-centered">
+            <h2 class="section-title-landing">Por que escolher o Connect TEF para integrar pagamentos via SmartPOS?</h2>
+         </div>
+         <div class="content-wrapper">
+            <div class="columns is-vcentered">
+               <div class="column is-12">
+                  <div class="columns is-vcentered is-multiline">
+                     <!-- Icon block -->
+                     <div class="column is-4">
+                        <div class="agency-icon-box">
+                           <div class="is-icon-reveal">
+                              <i class="im im-icon-Laptop-Phone"></i>
+                           </div>
+                           <div class="box-title">Integração com Web, Desktop, Android</div>
+                           <p class="box-content">
+                              O Connect TEF se adapta ao seu ambiente: seja web, desktop, Android ou sistemas em nuvem.
+                              Ideal para integrar ERPs, PDVs, CRMs, e-commerces e plataformas de delivery com múltiplos
+                              meios de pagamento via SmartPOS.
+                           </p>
+
+                        </div>
+                     </div>
+                     <!-- Icon block -->
+                     <div class="column is-4">
+                        <div class="agency-icon-box">
+                           <div class="is-icon-reveal">
+                              <i class="im im-icon-Smartphone"></i>
+                           </div>
+                           <div class="box-title">Compatível com seu TEF existente</div>
+                           <p class="box-content">
+                              Já tem um TEF funcionando? Com o Connect TEF, você mantém sua estrutura e troca apenas o
+                              pinpad pelo SmartPOS. Compatível com padrões TEF tradicionais, é a evolução natural para
+                              modernizar sua solução sem retrabalho.
+                           </p>
+
+                        </div>
+                     </div>
+                     <!-- Icon block -->
+                     <div class="column is-4">
+                        <div class="agency-icon-box">
+                           <div class="is-icon-reveal">
+                              <i class="im im-icon-Wifi"></i>
+                           </div>
+                           <div class="box-title">Vendas garantidas mesmo sem internet</div>
+                           <p class="box-content">
+                              O Connect TEF permite integração com o SmartPOS via rede local (LAN) ou pela internet.
+                              Mesmo que seu sistema esteja offline, a maquininha continua operando: ela usa seu próprio
+                              chip de dados ou Wi-Fi para concluir a transação com segurança, sem depender da conexão do
+                              PDV.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div></div>
+   </div>
+   <!--cards section-->
+   <!--section-->
+   <div class="section">
+      <div class="container">
+
+         <!-- Bloco 1: Entregas com Múltiplas Cobranças -->
+         <div class="columns is-vcentered is-multiline pb-40 pt-40">
+            <div class="column is-12-mobile is-5-tablet">
+               <h2 class="title is-5 quick-feature text-bold">
+                  Fila de Cobranças no SmartPOS para Atendimento móvel, Entregas ou Balcão
+               </h2>
+               <p class="body-text is-size-6">
+                  Com o Connect TEF, você pode enviar várias cobranças para o SmartPOS de forma organizada — ideal para
+                  atendimento em mesas, entregas externas ou vendas no balcão.
+                  Cada cobrança traz o nome do cliente, os itens e o valor, facilitando o dia a dia de operações com
+                  grande volume de transações.
+                  Uma solução pensada para o segmento food e outros modelos de atendimento móvel.
+               </p>
+            </div>
+            <div class="column is-12-mobile is-6-tablet is-offset-1-tablet">
+               <figure class="image is-fullwidth">
+                  <img src="assets/img/photos/captures/cobranca_bg_black.png" class="border-radius">
+               </figure>
+            </div>
+         </div>
+
+         <!-- Bloco 2: Maquininha como Canal de Marketing -->
+         <div class="columns is-vcentered is-multiline pb-40 pt-40 is-flex-direction-column-reverse-mobile">
+            <div class="column is-12-mobile is-6-tablet">
+               <figure class="image is-fullwidth">
+                  <img src="assets/img/photos/captures/marketing.png" alt="Tela de pagamento exibindo promoção"
+                     class="border-radius">
+               </figure>
+            </div>
+            <div class="column is-12-mobile is-5-tablet is-offset-1-tablet">
+               <h2 class="title is-5 quick-feature text-bold">
+                  Use a Tela do SmartPOS como Canal de Marketing no Ponto de Venda
+               </h2>
+               <p class="body-text is-size-6">
+                  Com o Connect TEF, sua maquininha deixa de ser apenas um terminal de pagamento e se transforma em uma
+                  ferramenta de comunicação com o cliente.
+                  Aproveite o momento da transação para exibir sua marca, promoções ou campanhas — direto na tela do
+                  SmartPOS, com impacto e relevância.
+               </p>
+               <ul class="body-text is-size-6 mt-3">
+                  <li>• Exibição de banners, imagens ou vídeos durante o pagamento</li>
+                  <li>• Divulgação de ofertas, combos, cupons ou novidades em tempo real</li>
+                  <li>• Reforço da identidade visual da sua marca no ponto de venda</li>
+                  <li>• Comunicação direta com o cliente no momento de maior atenção</li>
+                  <li>• Ideal para varejo, food service, redes franqueadas e campanhas locais</li>
+               </ul>
+
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+   <!--end section-->
+   <div class="section section-primary ">
+      <div class="container">
+         <div class="columns is-vcentered">
+            <!-- CTA content -->
+            <div class="column is-3 is-offset-1">
+               <div class="minimal-feature">
+                  <h2 class="title is-5 minimal-title bold-text light-text no-margin">
+                     Pronto para usar com adquirentes e facilitadores.
+                  </h2>
+               </div>
+            </div>
+            <!-- City illustration -->
+            <div class="column is-3 is-offset-2" style="width: 100%; max-width: 450px;">
+               <div class="city-container">
+                  <img src="assets/img/photos/captures/maquininhas.png" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+   <!--cards -->
+   <h3 class="title is-3 mt-40 has-text-centered">Explore todo o potencial do seu Smart POS</h3>
+   <div class="columns is-multiline is-flex-portrait is-centered">
+      <!-- Box 1 -->
+      <div class="column is-one-fifth flex-portrait-4">
+         <div class="flex-card is-feature padding-20">
+            <!-- Content -->
+            <div class="content-container has-text-left pb-4">
+               <div class="is-icon-reveal">
+                  <i class="im im-icon-Speach-BubbleDialog is-size-3"></i>
+               </div>
+               <h3 class="box-title">Receba feedback do cliente imediatamente após a venda.</h3>
+            </div>
+         </div>
+      </div>
+      <!-- Box 2 -->
+      <div class="column is-one-fifth flex-portrait-4">
+         <div class="flex-card is-feature padding-20">
+            <!-- Content -->
+            <div class="content-container has-text-left pb-4">
+               <div class="is-icon-reveal">
+                  <i class="im im-icon-ID-2 is-size-3"></i>
+               </div>
+               <h3 class="box-title">Capture CPF, e-mail ou telefone diretamente durante o pagamento.</h3>
+            </div>
+         </div>
+      </div>
+      <!-- Box 3 -->
+      <div class="column is-one-fifth flex-portrait-4">
+         <div class="flex-card is-feature padding-20">
+            <!-- Content -->
+            <div class="content-container has-text-left pb-4">
+               <div class="is-icon-reveal">
+                  <i class="im im-icon-Bar-Code is-size-3"></i>
+               </div>
+               <h3 class="box-title">Transforme o SmartPOS em coletor de códigos de barras com exportação facilitada.
+               </h3>
+            </div>
+         </div>
+      </div>
+      <!-- Box 4 -->
+      <div class="column is-one-fifth flex-portrait-4">
+         <div class="flex-card is-feature padding-20">
+            <!-- Content -->
+            <div class="content-container has-text-left pb-4">
+               <div class="is-icon-reveal">
+                  <i class="im im-icon-Billing is-size-3"></i>
+               </div>
+               <h3 class="box-title">Impressão de textos e imagens diretamente na maquininha.</h3>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--end cards-->
+
+   <!-- Seção com vídeo responsivo do YouTube -->
+   <div class="columns is-vcentered is-multiline pb-60">
+      <div class="column is-8 is-offset-2 is-relative is-centered-portrait">
+         <div class="bulkit-player-container is-16by9 reversed-play">
+            <iframe class="has-ratio" width="100%" height="100%" src="https://www.youtube.com/embed/N2zMP0PKB0o"
+               frameborder="0"
+               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+               allowfullscreen>
+            </iframe>
+         </div>
+      </div>
+   </div>
+   <div class="section is-medium">
+      <div class="container">
+         <!-- Title -->
+         <div class="section-title-wrapper">
+            <h2 class="title section-title has-text-centered dark-text text-bold">
+               Perguntas Frequentes sobre o Connect TEF
+            </h2>
+         </div>
+         <div class="faq-wrapper">
+            <div class="columns">
+               <div class="column is-5 is-offset-1">
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>O que é o Connect TEF e como ele facilita a integração com SmartPOS?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           O Connect TEF é uma plataforma que conecta seu sistema (PDV, ERP, e-commerce, delivery) a
+                           múltiplas maquininhas SmartPOS e adquirentes, com uma única integração. Isso elimina a
+                           necessidade de homologações separadas e simplifica o processo de pagamento integrado.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Quais tipos de sistemas posso integrar com o Connect TEF?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Você pode integrar sistemas web, desktop, Android, backoffice em nuvem, PDVs, ERPs,
+                           plataformas de e-commerce, aplicativos de delivery e muito mais, garantindo flexibilidade e
+                           compatibilidade ampla.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>O Connect TEF funciona via rede local ou internet?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           A comunicação com o SmartPOS pode ser feita tanto via rede local (Wi-Fi) quanto pela internet
+                           (3G/4G do chip da maquininha), garantindo operação contínua mesmo em ambientes com
+                           conectividade instável.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Preciso homologar cada adquirente individualmente?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Não. O Connect TEF abstrai a complexidade da integração com múltiplas adquirentes, eliminando
+                           a necessidade de homologações individuais para cada uma delas, acelerando o tempo para
+                           colocar seu sistema em operação.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Quais protocolos e métodos de integração o Connect TEF suporta?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           O Connect TEF oferece suporte a múltiplos protocolos, APIs, SDKs e padrões TEF tradicionais,
+                           facilitando a conexão com diferentes maquininhas SmartPOS e sistemas de pagamento.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>O que é a solução TEF integrada?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           É uma solução de pagamento eletrônico que permite integrar diretamente a maquininha de cartão
+                           com o seu sistema de vendas (PDV), automatizando processos como cobrança, emissão de
+                           comprovantes e conciliação de pagamentos.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Como faço a integração com meu sistema de vendas?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Fornecemos uma API e/ou módulo compatível com os principais sistemas de PDV. Nossa equipe
+                           técnica também pode auxiliar no processo de integração via SDK ou arquivo XML.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Quais bandeiras e adquirentes são compatíveis?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Trabalhamos com as principais adquirentes do mercado (Cielo, Rede (Itaú - Laranjinha), Stone,
+                           Getnet, PagSeguro,Sicred, Caixa, Bin, Adiq, Entrepay, CeoPag, Mercado pago, Vero, Fiserv,
+                           Pinbank, Phoebus, Clover, C6, Interpag, etc..), aceitando bandeiras como Visa, MasterCard,
+                           Elo,
+                           Amex, entre outras.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Consigo visualizar relatórios de vendas por período?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Sim. O sistema oferece relatórios completos por período, bandeira, forma de pagamento e
+                           terminal. Os relatórios podem ser exportados em PDF ou Excel.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="column is-5">
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Posso usar o Connect TEF para criar filas de cobrança para delivery e atendimento móvel?
+                        </h3>
+                     </div>
+                     <div class="block-body">
+                        <p>Sim. O Connect TEF permite enviar múltiplas cobranças para o SmartPOS, organizando filas para
+                           entregadores, garçons ou atendentes, o que agiliza o processo de pagamento e reduz erros.</p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>O que acontece se a conexão com a internet cair durante uma transação?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>Como a comunicação pode ocorrer via rede local, a maquininha SmartPOS pode continuar
+                           processando pagamentos usando o chip 3G/4G para garantir a operação offline, evitando perdas
+                           ou interrupções nas vendas.</p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Como o Connect TEF ajuda no marketing e comunicação com o cliente?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Durante a transação, o Connect TEF permite exibir imagens, vídeos e campanhas promocionais
+                           diretamente na tela do SmartPOS, transformando a maquininha em um canal ativo de marketing no
+                           ponto de venda.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Qual o tempo médio para implementar o Connect TEF no meu sistema?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Se seu sistema já utiliza TEF, a compatibilidade com o Connect TEF é imediata.
+                           Para sistemas que ainda não possuem TEF, o tempo de implementação varia conforme a
+                           complexidade, mas normalmente é possível começar a operar em poucos dias.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Como posso começar a usar o Connect TEF?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>Entre em contato conosco para uma demonstração personalizada. Nossa equipe oferece suporte
+                           completo para integrar sua solução com as maquininhas SmartPOS e adquirentes de forma rápida
+                           e segura.</p>
+                     </div>
+                  </div>
+
+
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Como funciona o suporte técnico?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Oferecemos suporte técnico via chat, telefone ou e-mail, com plantão em horários comerciais e
+                           atendimento emergencial 24h em casos críticos.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>Posso usar mais de um terminal no mesmo estabelecimento?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Sim. A solução permite múltiplos terminais funcionando de forma sincronizada com um único PDV
+                           ou sistema de gestão.
+                        </p>
+                     </div>
+                  </div>
+
+                  <!--Faq Block-->
+                  <div class="faq-block">
+                     <div class="block-header">
+                        <div class="header-icon">
+                           <i class="fa fa-plus"></i>
+                        </div>
+                        <h3>É possível integrar com ERP ou sistemas de gestão?</h3>
+                     </div>
+                     <div class="block-body">
+                        <p>
+                           Sim. A plataforma conta com integração direta via API para ERPs, facilitando o envio e
+                           recebimento automático de dados de vendas e pagamentos.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+   <!--call to actions-->
+   <!-- Card Call -->
+   <section class="cta-block section py-6">
+      <div class="container" style="padding-left: 16px; padding-right: 16px; max-width: 1200px; margin: 0 auto;">
+         <article class="box has-background-black-ter">
+            <header class="head-text mb-4">
+               <h3 class="title is-4 has-text-white">Vamos conversar?</h3>
+               <p class="has-text-white">Conte para nós os desafios do seu negócio</p>
+            </header>
+            <div class="head-action">
+               <div class="buttons">
+                  <a href="tel:+55000000000" class="button primary-btn is-rounded raised action-button has-text-white">
+                     <i class="fas fa-phone" aria-hidden="true"></i>
+                     Receba uma ligação
+                  </a>
+                  <a href="https://wa.me/+556130376333" class="button action-button is-success is-rounded has-text-white">
+                     <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                     Fale pelo WhatsApp
+                  </a>
+               </div>
+            </div>
+         </article>
+      </div>
+   </section>
+   <!-- Fim Card Call -->
+
+   <!-- CTA -->
+   <section class="section has-background-black-ter py-6">
+      <div class="container" style="padding-left: 16px; padding-right: 16px; max-width: 1200px; margin: 0 auto;">
+         <div class="columns is-vcentered is-multiline">
+
+            <!-- Texto do CTA -->
+            <div class="column is-12-mobile is-6-tablet is-5-desktop">
+               <h2 class="title is-3 has-text-weight-bold has-text-white">
+                  Gerenciador Padrão TEF: compatível com sistemas que já usam TEF
+               </h2>
+               <p class="subtitle is-5 has-text-white mb-5">
+                  Compatível com sistemas que usam TEF padrão como Sitef, Elgin ou troca de arquivos (INTPOS).
+                  Se seu sistema já usa TEF, ele já é compatível com o Connect TEF.
+               </p>
+               <a href="https://www.pdvpos.com.br/contato/index.html"
+                  class="button is-white is-medium is-rounded has-text-weight-semibold mb-5 mt-5">
+                  Fale com o especialista
+               </a>
+            </div>
+
+            <!-- Imagem ilustrativa -->
+            <div class="column is-12-mobile is-6-tablet is-6-desktop">
+               <figure class="image is-4by3">
+                  <img src="assets/img/photos/captures/connecttef2.png"
+                     alt="Dashboard do ERP mostrando gráficos e métricas de gestão empresarial" loading="lazy">
+               </figure>
+            </div>
+
+         </div>
+      </div>
+   </section>
+   <!-- Fim do CTA -->
+
+   <!--end call to acitons -->
+   <iframe id="preview-frame" src="footer.html" name="preview-frame" frameborder="0" noresize="noresize"></iframe>
+   <script src="assets/js/app.js"></script>
+   <script src="assets/js/core.js"></script>
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+         const burger = document.querySelector('.navbar-burger');
+         const menu = document.getElementById('navbar-menu');
+
+         burger.addEventListener('click', () => {
+            burger.classList.toggle('is-active');
+            menu.classList.toggle('is-active');
+         });
+      });
+
+   </script>
+
+
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+         const blocks = document.querySelectorAll('.faq-block');
+
+         blocks.forEach(block => {
+            const header = block.querySelector('.block-header');
+            const body = block.querySelector('.block-body');
+            const icon = block.querySelector('.header-icon i');
+
+            header.addEventListener('click', () => {
+               const isActive = body.classList.contains('open');
+
+               // Fecha todos
+               document.querySelectorAll('.faq-block').forEach(b => {
+                  b.querySelector('.block-body').classList.remove('open');
+                  b.querySelector('.block-header').classList.remove('active');
+                  const i = b.querySelector('.header-icon i');
+                  i.classList.remove('fa-minus', 'rotate');
+                  i.classList.add('fa-plus');
+               });
+
+               // Abre se não estava ativo
+               if (!isActive) {
+                  body.classList.add('open');
+                  header.classList.add('active');
+                  icon.classList.remove('fa-plus');
+                  icon.classList.add('fa-minus', 'rotate');
+               }
+            });
+         });
+      });
+   </script>
+   <!-- Plyr JS -->
+   <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+   <script>
+      const player = new Plyr('#hero-player');
+   </script>
+
+
+</body>
+
+</html>
