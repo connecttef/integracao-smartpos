@@ -1,35 +1,57 @@
 .section-logos {
   overflow: hidden;
   background: #0a1324;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .logo-slider {
   overflow: hidden;
   position: relative;
   width: 100%;
+  height: 40px;
 }
 
 .logo-track {
   display: flex;
   min-width: max-content;
   gap: 2rem;
-  animation: scroll-logos 60s linear infinite;
   will-change: transform;
 }
 
 .logo-track img {
-  height: 80px;
+  height: 40px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
 
-@keyframes scroll-logos {
+/* Animação normal: esquerda para direita */
+.logo-slider.normal .logo-track {
+  animation: scroll-left 60s linear infinite;
+}
+
+/* Animação reversa: direita para esquerda */
+.logo-slider.reverse .logo-track {
+  animation: scroll-right 60s linear infinite;
+}
+
+@keyframes scroll-left {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
