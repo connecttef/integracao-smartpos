@@ -1,0 +1,35 @@
+.section-logos {
+  overflow: hidden;
+  background: #0a1324;
+  padding: 1rem 0;
+}
+
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  min-width: max-content;
+  gap: 2rem;
+  animation: scroll-logos 120s linear infinite;
+  will-change: transform;
+}
+
+.logo-track img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
